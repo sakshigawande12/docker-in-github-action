@@ -60,7 +60,7 @@ jobs:
           push: true
           registry: sakshigawande12
           repository: maven-app
-          tags: ${{env.IMAGE_REPOSITORY}}
+          tags: 4
 #
 #      - name: Run Snyk to check for vulnerabilities
 #        uses: snyk/actions/maven@master
