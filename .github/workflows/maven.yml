@@ -58,16 +58,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: sakshigawande12/maven-app:${{ github.sha }}
-
-      - name: Build image push to sakshigawande12
-        uses: docker/build-push-action@v1
-        with:
-          registry: sakshigawande12
-          tags: ${{ github.sha }}
-          repository: maven-app
-          path: '.'
-          dockerfile: ./Dockerfile
-          push: true
-
+          tags: sakshigawande12/maven-app:${{ GITHUB_RUN_NUMBER }}
 
