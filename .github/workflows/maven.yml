@@ -55,8 +55,8 @@ jobs:
       - name: Build and push docker image
         uses: docker/build-push-action@v2
         with:
-          path: .
-          dockerfile: ./Dockerfile
+          context: .
+          file: ./Dockerfile
           push: true
           registry: sakshigawande12
           repository: maven-app
