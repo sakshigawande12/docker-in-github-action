@@ -58,9 +58,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          registry: sakshigawande12
-          repository: maven-app
-          tags: 5
+          tags: sakshigawande12/maven-app:$GITHUB_RUN_NUMBER
+          
 #
 #      - name: Run Snyk to check for vulnerabilities
 #        uses: snyk/actions/maven@master
