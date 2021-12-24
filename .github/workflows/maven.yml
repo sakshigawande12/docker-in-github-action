@@ -58,30 +58,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: sakshigawande12/maven-app:$GITHUB_RUN_NUMBER
-          
-#
-#      - name: Run Snyk to check for vulnerabilities
-#        uses: snyk/actions/maven@master
-#        continue-on-error: true
-#        env:
-#          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-#        with:
-#          command: monitor
-#
-#      - name: Run Snyk to check Docker image for vulnerabilities
-#          # Snyk can be used to break the build when it detects vulnerabilities.
-#          # In this case we want to upload the issues to GitHub Code Scanning
-#        continue-on-error: true
-#        uses: snyk/actions/docker@master
-#        env:
-#            # In order to use the Snyk Action you will need to have a Snyk API token.
-#            # More details in https://github.com/snyk/actions#getting-your-snyk-token
-#            # or you can signup for free at https://snyk.co/SignUpGH
-#          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-#        with:
-#          image: sakshigawande12/maven-app:$GITHUB_RUN_NUMBER
-#          args: --file=Dockerfile
+          tags: sakshigawande12/maven-app:$(env.IMAGE_REPOSITORY)
 
-    
 
