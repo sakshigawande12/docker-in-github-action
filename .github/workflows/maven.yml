@@ -58,5 +58,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: sakshigawande12/maven-app:${{ github_run_number }}
+          tags: sakshigawande12/maven-app:${{ github.sha }}
 
